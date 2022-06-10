@@ -1,6 +1,6 @@
 --created by Sparklyfedorablox lol
 local UIS = game:GetService('UserInputService')
-local frame = script.Parent
+local GUIframe = script.Parent
 local dragToggle = nil
 local dragSpeed = 0
 local dragStart = nil
@@ -10,14 +10,14 @@ local function updateInput(input)
 	local delta = input.Position - dragStart
 	local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
 		startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	game:GetService('TweenService'):Create(GUIframe, TweenInfo.new(dragSpeed), {Position = position}):Play()
 end
 
-GUIrame.InputBegan:Connect(function(input)
+GUIframe.InputBegan:Connect(function(input)
 	if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
 		dragToggle = true
 		dragStart = input.Position
-		startPos = frame.Position
+		startPos = GUIframe.Position
 		input.Changed:Connect(function()
 			if input.UserInputState == Enum.UserInputState.End then
 				dragToggle = false
