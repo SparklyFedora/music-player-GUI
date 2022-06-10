@@ -1,4 +1,4 @@
---created by Sparklyfedorablox lol
+
 - Gui to Lua
 -- Version: 3.2
 
