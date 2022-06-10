@@ -67,7 +67,7 @@ Stop.TextSize = 14.000
 
 -- Scripts:
 
-local function QCUT_fake_script() -- GUIFrame.LocalScript 
+local function QCUT() -- GUIFrame.LocalScript 
 	local script = Instance.new('LocalScript', GUIFrame)
 
 	local Music = game:GetService("ReplicatedStorage"):WaitForChild("Music")
@@ -84,8 +84,8 @@ local function QCUT_fake_script() -- GUIFrame.LocalScript
 	Button(Pa:WaitForChild("Stop"))
 	
 end
-coroutine.wrap(QCUT_fake_script)()
-local function JBBOUWC_fake_script() -- GUIFrame.LocalScript 
+coroutine.wrap(QCUT)()
+local function JBBOUWC() -- GUIFrame.LocalScript 
 	local script = Instance.new('LocalScript', GUIFrame)
 
 	local UIS = game:GetService('UserInputService')
@@ -124,4 +124,4 @@ local function JBBOUWC_fake_script() -- GUIFrame.LocalScript
 	end)
 	
 end
-coroutine.wrap(JBBOUWC_fake_script)()
+coroutine.wrap(JBBOUWC)()
