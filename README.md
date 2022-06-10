@@ -1,11 +1,4 @@
 --created by Sparklyfedorablox lol
-local UIS = game:GetService('UserInputService')
-local GUIframe = script.Parent
-local dragToggle = nil
-local dragSpeed = 0
-local dragStart = nil
-local startPos = nil
-
 local function updateInput(input)
 	local delta = input.Position - dragStart
 	local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
@@ -14,7 +7,6 @@ local function updateInput(input)
 end
 
 GUIframe.InputBegan:Connect(function(input)
-	if  (input.UserInputType == Enum.UserInputType.Touch) then 
 		dragToggle = true
 		dragStart = input.Position
 		startPos = GUIframe.Position
