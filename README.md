@@ -74,17 +74,15 @@ local function QCUT_fake_script() -- GUIFrame.LocalScript
 	local Music = game:GetService("ReplicatedStorage"):WaitForChild("Music")
 	
 	local Pa = script.Parent
-	
+	local Music = game:GetService("ReplicatedStorage"):WaitForChild("Music")
+Button(Pa:WaitForChild("Play"))
+Button(Pa:WaitForChild("Stop"))
 	function Button (ThisButton)
 		ThisButton.MouseButton1Down:Connect(function()
 			Music:FireServer(Pa.ID.Text,ThisButton.Name)
 		end)
 	end
 	
-	Button(Pa:WaitForChild("Play"))
-	Button(Pa:WaitForChild("Stop"))
-	
-end
 coroutine.wrap(QCUT_fake_script)()
 local function JBBOUWC_fake_script() -- GUIFrame.LocalScript 
 	local script = Instance.new('LocalScript', GUIFrame)
@@ -126,15 +124,3 @@ local function JBBOUWC_fake_script() -- GUIFrame.LocalScript
 	
 end
 coroutine.wrap(JBBOUWC_fake_script)()
-local Music = game:GetService("ReplicatedStorage"):WaitForChild("Music")
-
-local Pa = script.Parent
-
-function Button (ThisButton)
-	ThisButton.MouseButton1Down:Connect(function()
-		Music:FireServer(Pa.ID.Text,ThisButton.Name)
-	end)
-end
-
-Button(Pa:WaitForChild("Play"))
-Button(Pa:WaitForChild("Stop"))
