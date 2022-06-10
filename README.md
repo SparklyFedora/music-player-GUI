@@ -12,7 +12,7 @@ local function updateInput(input)
 	game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 end
 
-frame.InputBegan:Connect(function(input)
+GUIrame.InputBegan:Connect(function(input)
 	if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
 		dragToggle = true
 		dragStart = input.Position
@@ -32,5 +32,15 @@ UIS.InputChanged:Connect(function(input)
 		end
 	end
 end)
+local Music = game:GetService("ReplicatedStorage"):WaitForChild("Music")
 
-	
+local Pa = script.Parent
+
+function Button (ThisButton)
+	ThisButton.MouseButton1Down:Connect(function()
+		Music:FireServer(Pa.ID.Text,ThisButton.Name)
+	end)
+end
+
+Button(Pa:WaitForChild("Play"))
+Button(Pa:WaitForChild("Stop"))
