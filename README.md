@@ -14,7 +14,7 @@ local function updateInput(input)
 end
 
 GUIframe.InputBegan:Connect(function(input)
-	if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	if  (input.UserInputType == Enum.UserInputType.Touch) then 
 		dragToggle = true
 		dragStart = input.Position
 		startPos = GUIframe.Position
