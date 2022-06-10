@@ -84,8 +84,6 @@ local function QCUT_fake_script() -- GUIFrame.LocalScript
 	Button(Pa:WaitForChild("Stop"))
 	
 end
-coroutine.wrap(QCUT_fake_script)()
-local function JBBOUWC_fake_script() -- GUIFrame.LocalScript 
 	local script = Instance.new('LocalScript', GUIFrame)
 
 	local UIS = game:GetService('UserInputService')
