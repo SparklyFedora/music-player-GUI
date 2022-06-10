@@ -1,3 +1,4 @@
+--created by Sparklyfedorablox lol
 local UIS = game:GetService('UserInputService')
 local frame = script.Parent
 local dragToggle = nil
